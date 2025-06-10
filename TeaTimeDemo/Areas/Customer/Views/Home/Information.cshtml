@@ -1,0 +1,149 @@
+﻿@{
+    ViewData["Title"] = "公司資訊";
+}
+
+@section Styles {
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        h1, h3, h4 {
+            color: #8B0000;
+        }
+
+        p, li {
+            font-size: 18px;
+            color: #5c3a00;
+        }
+
+        .info-container {
+            max-width: 1140px;
+            margin: auto;
+            padding: 40px 20px;
+            background-image: url("https://i.imgur.com/ta1dRpK.png");
+            /* background: #fff5e6; */
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .info-banner {
+            text-align: center;
+        }
+
+            .info-banner img {
+                max-height: 200px;
+                margin-bottom: 15px;
+            }
+
+        .section-nav {
+            position: sticky;
+            top: 40px;
+            z-index: 900;
+            background-color: #fff5e6;
+            padding: 10px 0;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+            .section-nav a {
+                margin: 0 15px;
+                font-weight: bold;
+                color: #8B0000;
+                text-decoration: none;
+            }
+
+                .section-nav a:hover {
+                    text-decoration: underline;
+                }
+
+        section {
+            scroll-margin-top: 100px;
+            margin-bottom: 40px;
+        }
+    </style>
+}
+
+<div class="info-container" data-aos="fade-up">
+    <div class="info-banner">
+        <img src="https://i.imgur.com/NXAOZtT.png" alt="Logo" class="img-fluid rounded" />
+        <h1 class="fw-bold">九宮聚香鍋貼水餃館</h1>
+        <hr />
+    </div>
+
+    <div class="section-nav">
+        <a href="#history">歷史沿革</a>
+        <a href="#mission">經營理念</a>
+        <a href="#products">產品特色</a>
+        <a href="#experience">用餐體驗</a>
+        <a href="#future">社會責任</a>
+    </div>
+
+    <section id="history" data-aos="fade-up">
+        <h3>一、企業背景與歷史沿革</h3>
+        <p>
+            九宮聚香鍋貼水餃館創立於民國初年，距今已逾一百年歷史。最初創辦人為一位對中式點心充滿熱忱的廚師，憑藉祖傳秘方與精益求精的手藝，從街邊小攤發展成地方知名老店。歷經多代傳承，九宮聚香在保留經典技藝的同時，也持續創新，成為全台知名連鎖品牌。
+        </p>
+    </section>
+
+    <section id="mission" data-aos="fade-up">
+        <h3>二、經營理念與文化精神</h3>
+        <ul>
+            <li><strong>傳統精髓，永續傳承：</strong> 堅持手工製作與誠信經營。</li>
+            <li><strong>創新發展，與時俱進：</strong> 整合線上平台與智能點餐系統。</li>
+            <li><strong>品質第一，顧客至上：</strong> 嚴選食材，製程透明。</li>
+            <li><strong>社區情懷，文化傳承：</strong> 積極參與在地活動，推廣飲食美學。</li>
+        </ul>
+    </section>
+
+    <section id="products" data-aos="fade-up">
+        <h3>三、核心產品與創新特色</h3>
+        <h4>1. 經典鍋貼</h4>
+        <ul>
+            <li>極薄麵皮、酥脆底層、多汁內餡。</li>
+            <li>搭配特製手工辣醬，香氣四溢。</li>
+        </ul>
+        <h4>2. 手工水餃</h4>
+        <ul>
+            <li>口味多樣：高麗菜豬肉、韭菜、鮮蝦等。</li>
+            <li>每日新鮮現包，皮薄餡多。</li>
+        </ul>
+        <h4>3. 創新附餐</h4>
+        <ul>
+            <li>結合台味與健康概念，推出「涼拌木耳」、「酥炸花枝酥」等招牌小菜。</li>
+            <li>提供線上訂餐、門市自助點餐與外送服務。</li>
+        </ul>
+    </section>
+
+    <section id="experience" data-aos="fade-up">
+        <h3>四、用餐體驗與服務</h3>
+        <ul>
+            <li><strong>懷舊裝潢：</strong> 店內陳設復古風，展現文化底蘊。</li>
+            <li><strong>舒適空間：</strong> 寬敞明亮、座位多元，適合各年齡層顧客。</li>
+            <li><strong>數位升級：</strong> 提供 Wi-Fi、自助機與行動支付。</li>
+        </ul>
+    </section>
+
+    <section id="future" data-aos="fade-up">
+        <h3>五、社會責任與未來展望</h3>
+        <ul>
+            <li>響應 ESG 環保政策，採用可分解包材。</li>
+            <li>發展顧客會員與點數集成。</li>
+            <li>計畫拓展至海外市場，弘揚台灣小吃文化。</li>
+        </ul>
+    </section>
+
+    <section class="text-center" data-aos="fade-up">
+        <p class="fw-bold mt-4">九宮聚香，融合百年技藝與現代精神，致力打造美味、文化與便利兼具的飲食體驗。</p>
+        <img src="https://i.imgur.com/foh2Zoq.png" alt="品牌團隊" class="img-fluid rounded shadow mt-3" style="max-width: 600px;" />
+    </section>
+</div>
+
+@section Scripts {
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+}

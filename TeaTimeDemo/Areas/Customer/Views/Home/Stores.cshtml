@@ -1,0 +1,31 @@
+﻿@model IEnumerable<DumplingStore.Models.Store>
+
+@{
+    ViewData["Title"] = "分店資訊";
+}
+
+<h1 class="text-center text-danger mt-4">@ViewData["Title"]</h1>
+
+<p class="text-muted text-center mb-5">
+    九宮聚香鍋貼水餃館百年傳統，創新經營。全台分店遍佈，呈現古法美味與現代便捷。<br />
+    每家店均以匠心製作，邀您體驗正宗鍋貼水餃，感受傳統風情與用心服務。
+</p>
+
+<div class="container">
+    <table id="tblData" class="table table-bordered table-striped text-center">
+        <thead class="table-dark">
+            <tr>
+                <th>分店名稱</th>
+                <th>地址</th>
+                <th>城市</th>
+                <th>電話號碼</th>
+                <th>備註</th>
+            </tr>
+        </thead>
+    </table>
+</div>
+
+@section Scripts {
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="~/js/stores.js"></script>
+}

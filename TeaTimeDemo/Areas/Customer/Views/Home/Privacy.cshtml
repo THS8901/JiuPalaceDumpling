@@ -1,0 +1,161 @@
+﻿﻿@{
+    ViewData["Title"] = "開發團隊";
+}
+
+@section Styles {
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+        html {
+            scroll-padding-top: 80px;
+        }
+
+        h1, h2, h3, h5 {
+            color: #8B0000;
+        }
+
+        p, li {
+            font-size: 18px;
+            color: #5c3a00;
+        }
+
+        .team-container {
+            max-width: 1140px;
+            margin: auto;
+            padding: 40px 20px;
+            background-image: url("https://i.imgur.com/ta1dRpK.png");
+            /* background: #fff5e6; */
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-title {
+            font-size: 24px;
+            color: crimson !important;
+        }
+
+        .card-text {
+            font-size: 16px;
+            color: darksalmon !important;
+        }
+
+        /* .card-img-top { */
+        /*     height: 200px; */
+        /*     object-fit: cover; */
+        /* } */
+
+        .card-img-top {
+            background: darkgoldenrod ;
+            height: 200px;
+            object-fit: contain;
+        }
+
+        .team-section {
+            margin-bottom: 50px;
+        }
+    </style>
+}
+
+<div class="team-container" data-aos="fade-up">
+    <div class="text-center mb-4">
+        <h1 class="fw-bold">九宮聚香鍋貼水餃館 開發團隊介紹</h1>
+        <hr />
+    </div>
+
+    <div class="team-section" data-aos="fade-up">
+        <p>
+            在「九宮聚香鍋貼水餃館」致力於傳承百年美食文化的同時，我們也希望透過現代化的科技，
+            將傳統風味以嶄新的方式呈現給每一位顧客。因此，本網站的開發由一支熱血且專業的開發團隊傾力打造，
+            運用當前最新的技術框架，將品牌精神轉化為數位體驗，實現「經典與創新」的完美融合。
+        </p>
+        <p>
+            本網站是由我們開發團隊採用 ASP.NET Core 9.0 MVC 架構進行建置，結合 Entity Framework Core 作為 ORM 解決方案，
+            搭配模組化資料存取層與嚴謹的 MVC 分層設計，確保網站在效能、安全性與可擴充性上皆具備現代標準。
+        </p>
+        <p>
+            團隊成員秉持著開放協作、持續學習的精神進行開發，並持續朝向功能深化與客製化發展，未來預計整合會員系統、線上訂餐與數位點餐平板介面，
+            實現六面聚香品牌數位轉型的願景。
+        </p>
+    </div>
+
+    <h2 class="text-center mb-4">團隊成員介紹</h2>
+	<div class="row row-cols-1 row-cols-md-3 g-4 mb-5 justify-content-center" data-aos="fade-up">
+    <!-- 成員 1 -->
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="https://i.imgur.com/z24qKvU.jpeg" class="card-img-top" alt="團隊成員圖片">
+            <div class="card-body">
+                <h5 class="card-title fw-bold">唐詳勝</h5>
+				<p class="card-text">國立宜蘭大學人工智慧碩士及國立宜蘭大學資訊工程學系學士畢業，有C#、Python、ASP.NET MVC、SQL Server、Numpy、Pandas、OpenCV、Tensorflow與Keras等技術經驗，具備影像識別、前後端與資料庫實作經歷。</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 成員 2 -->
+    <div class="col">
+        <div class="card h-100 shadow">
+            <img src="https://i.imgur.com/SrcfcK5.jpg" class="card-img-top" alt="團隊成員圖片">
+            <div class="card-body">
+                <h5 class="card-title fw-bold">陳鈺勝</h5>
+                <p class="card-text">國立中正大學醫療資訊管理碩士及淡江大學資訊管理學士畢業，有過Java、C#、ASP.NET MVC、Android Studio、Firebase、Oracle、SQL Server 等技術使用經驗，具備後端與資料庫實作經歷。</p>
+            </div>
+        </div>
+    </div>
+
+
+        <!-- 成員 3 -->
+        @* <div class="col"> *@
+        @*     <div class="card h-100 shadow"> *@
+        @*         <img src="https://via.placeholder.com/300x200?text=成員3" class="card-img-top" alt="團隊成員圖片"> *@
+        @*         <div class="card-body"> *@
+        @*             <h5 class="card-title fw-bold">成員3名字</h5> *@
+        @*             <p class="card-text">全端協調與資料管理，負責資料遷移、Migration 編寫與部署，協助 DevOps 環境建置與 CI/CD 流程設計。</p> *@
+        @*         </div> *@
+        @*     </div> *@
+        @* </div> *@
+    </div>
+
+    <h2 class="text-center mb-4">技術與展望</h2>
+
+    <div class="team-section" data-aos="fade-up">
+        <h5>1. 專案技術與架構</h5>
+        <ul>
+            <li>ASP.NET Core 9.0 + Entity Framework Core ORM</li>
+            <li>乾淨架構（Clean Architecture）：資料層 / 商業邏輯層 / UI 分離</li>
+            <li>模組化 MVC，包含 Admin/Customer 區塊、Razor Page 管理後台</li>
+        </ul>
+
+        <h5>2. 前端技術</h5>
+        <ul>
+            <li>RWD 響應式設計（Bootstrap）</li>
+            <li>資料表介面整合 DataTables.js</li>
+            <li>SweetAlert、Toastr 增強互動性</li>
+        </ul>
+
+        <h5>3. 功能亮點</h5>
+        <ul>
+            @* <li>地圖導覽功能整合 Google Maps API</li> *@
+            <li>會員系統 + 授權機制</li>
+            <li>支援數位菜單、後台管理</li>
+        </ul>
+
+        <h5>4. 團隊文化</h5>
+        <ul>
+            <li>團隊成員秉持開放協作精神，透過 GitHub 控管版本，進行持續交付與週期性驗收。</li>
+        </ul>
+
+        <h5>5. 未來展望</h5>
+        <ul>
+            @* <li>導入 AI 食材預測模型與庫存優化</li> *@
+            <li>開放 API 串接行動 APP 點餐系統</li>
+            <li>推進海外拓點，打造全球美食品牌</li>
+        </ul>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+}

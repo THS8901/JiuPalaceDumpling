@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Product>
+
+<style>
+    .card-img-top {
+        width: 100%; /* 设置图片宽度为容器宽度的 100% */
+        height: 200px; /* 保持图片原始宽高比 */
+        display: block; /* 防止默认的内联特性造成的对齐问题 */
+        margin: 0 auto; /* 水平居中 */
+        object-fit: cover; /* 覆盖容器，多余部分被裁剪 */
+        object-position: center; /* 从图片中心开始裁剪，确保图片的中心内容能够显示 */
+    }
+
+    .news-item {
+        margin-bottom: 20px;
+        padding: 10px;
+        border: 1px solid #008cba;
+        border-radius: 5px;
+    }
+
+    .card {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* 居中卡片中的所有元素，包括图片 */
+    }
+
+        .card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+    .card-body {
+        padding: 16px;
+    }
+</style>
+
+<div class="container py-5">
+    <div class="text-center mb-5" data-aos="fade-down">
+        <img src="https://i.imgur.com/6dwadVX.png" alt="九宮聚香鍋貼水餃館" style="height: 100%; max-width: 100%; object-fit: contain;" />
+        <h1 class="fw-bold text-danger">MENU</h1>
+        <p class="text-muted">九宮聚香鍋貼水餃館最新上市的各種類鍋貼水餃</p>
+    </div>
+</div>
+
+<div class="row pb-3">
+    @foreach (var product in Model)
+    {
+        <div class="col-lg-3 col-sm-6">
+            <div class="row p-2">
+                <div class="col-12 p-1">
+                    <div class="card">
+                        <img src="@product.ImageUrl" class="card-img-top rounded" alt="Product Image">
+                        <div class="card-body">
+                            <div class="p-1">
+                                <p class="card-title h5 text-primary">@product.Name</p>
+                                <p class="card-title text-secondary"><b>@product.Size</b></p>
+                            </div>
+                            <div class="p-1">
+                                <p>價格:<b>$@product.Price.ToString("0.00")</b></p>
+                            </div>
+                            <div class="p-1">
+                                <a asp-action="Details" asp-route-productId="@product.Id" class="btn btn-primary form-control">
+                                    詳細資訊
+                                </a>
+                            </div>
+                        </div> <!-- card-body -->
+                    </div> <!-- card -->
+                </div> <!-- col-12 -->
+            </div> <!-- row -->
+        </div> <!-- col-lg-3 -->
+    }
+</div>

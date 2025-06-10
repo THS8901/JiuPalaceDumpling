@@ -1,0 +1,99 @@
+﻿@{
+    ViewData["Title"] = "最新消息";
+
+    var newsList = new List<dynamic>
+    {
+        new {
+            Title = "新品上市",
+            Description = "你以為水餃只能溫柔可愛？這次我們來點不一樣的！全新辣味水餃，嗆辣爽口，刺激味蕾，讓你一口接一口停不下來～只限量供應，快來挑戰你的辣感極限！",
+            PublishDate = DateTime.Now,
+            ImageUrl = Url.Content("~/images/dum.png")
+        },
+        new {
+            Title = "套餐優惠",
+            Description = "熱呼呼的手工水餃，配上一碗香濃滑順的玉米濃湯，吃得飽也吃得巧～現在點水餃套餐立享優惠價，溫暖加倍，美味不加價！",
+            PublishDate = DateTime.Now.AddDays(-1),
+            ImageUrl = "https://www.hucc-coop.tw/uploads/01%E7%94%A2%E5%93%81%E8%88%87%E7%94%9F%E7%94%A2%E8%80%85/%E7%94%A2%E5%93%81%E5%9C%96%E6%AA%94/%E8%AA%BF%E7%90%86%E9%A3%9F%E6%9D%90/%E8%AA%BF%E7%90%86%E9%A3%9F%E5%93%81/%E9%AB%98%E9%BA%97%E8%8F%9C%E8%B1%AC%E8%82%89%E6%B0%B4%E9%A4%83A.jpg"
+        },
+        new {
+            Title = "周年折扣",
+            Description = "開店周年慶，即日起至5/10，大杯紅茶5折！",
+            PublishDate = DateTime.Now.AddDays(-2),
+            ImageUrl = "https://yukocat.com/wp-content/uploads/pixnet/1af653dbfc939260e904564b479993d7.jpg"
+        }
+    };
+}
+
+@section Styles {
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <style>
+        html {
+            scroll-padding-top: 100px;
+        }
+
+        .news-card {
+            border-radius: 12px;
+            overflow: hidden;
+            transition: 0.3s ease;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+        }
+
+            .news-card:hover {
+                transform: scale(1.02);
+                box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+            }
+
+        .news-img {
+            height: 200px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .news-meta {
+            font-size: 14px;
+            color: #888;
+        }
+
+        .news-title {
+            font-size: 22px;
+            color: #8B0000;
+            font-weight: bold;
+        }
+
+        .news-desc {
+            font-size: 16px;
+            color: #333;
+        }
+    </style>
+}
+
+<div class="container py-5">
+    <div class="text-center mb-5" data-aos="fade-down">
+        <img src="https://i.imgur.com/6dwadVX.png" alt="九宮聚香鍋貼水餃館" style="height: 100%; max-width: 100%; object-fit: contain;" />
+        <h1 class="fw-bold text-danger">最新消息</h1>
+        <p class="text-muted">了解九宮聚香鍋貼水餃館的最新活動、優惠與產品上市</p>
+    </div>
+
+    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" data-aos="fade-up">
+        @foreach (var item in newsList)
+        {
+            <div class="col">
+                <div class="card news-card h-100">
+                    <img src="@item.ImageUrl" class="news-img" alt="News Image">
+                    <div class="card-body">
+                        <div class="news-title">@item.Title</div>
+                        <div class="news-meta mb-2">@item.PublishDate.ToString("yyyy-MM-dd")</div>
+                        <p class="news-desc">@item.Description</p>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+@section Scripts {
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+}
